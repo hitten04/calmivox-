@@ -50,7 +50,7 @@ const SignupPage: React.FC<SignupPageProps> = ({ onSignup, onNavigateToLogin, th
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
                      <div className="flex items-center justify-center space-x-3 mb-4">
-                        <LogoIcon className="w-12 h-12" />
+                        <LogoIcon className="w-12 h-16" />
                         <h1 className="text-4xl font-bold font-display text-gray-900 dark:text-white">Create Account</h1>
                      </div>
                      <p className="text-gray-600 dark:text-gray-400">Join Calmivox AI and get 10 free credits!</p>

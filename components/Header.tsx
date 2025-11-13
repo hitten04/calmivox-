@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentPage, setCur
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            <LogoIcon className="w-8 h-8" />
+            <LogoIcon className="h-8 w-12" />
             <h1 className="text-xl font-bold font-display text-gray-900 dark:text-white">Calmivox AI</h1>
           </div>
           
