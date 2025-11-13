@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { SunIcon, MoonIcon, ImageIcon, CreditCardIcon, AdminDashboardIcon, HistoryIcon, LogoutIcon, MenuIcon, XIcon, LogoIcon, GalleryIcon } from './icons';
+import { SunIcon, MoonIcon, ImageIcon, CreditCardIcon, AdminDashboardIcon, HistoryIcon, LogoutIcon, MenuIcon, XIcon, LogoIcon, GalleryIcon, MailIcon } from './icons';
 import type { Page, User } from '../App';
 
 interface HeaderProps {
@@ -51,6 +50,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentPage, setCur
              <NavButton page="history" label="History" icon={<GalleryIcon className="w-5 h-5" />} />
              <NavButton page="payment" label="Buy Credits" icon={<CreditCardIcon className="w-5 h-5" />} />
              <NavButton page="user-payments" label="My Payments" icon={<HistoryIcon className="w-5 h-5" />} />
+             <NavButton page="contact" label="Contact" icon={<MailIcon className="w-5 h-5" />} />
              {currentUser.role === 'admin' && (
                 <NavButton page="admin" label="Admin" icon={<AdminDashboardIcon className="w-5 h-5" />} />
              )}
@@ -113,6 +113,7 @@ const Header: React.FC<HeaderProps> = ({ theme, toggleTheme, currentPage, setCur
                 <NavButton page="history" label="History" icon={<GalleryIcon className="w-5 h-5" />} isMobile={true} />
                 <NavButton page="payment" label="Buy Credits" icon={<CreditCardIcon className="w-5 h-5" />} isMobile={true} />
                 <NavButton page="user-payments" label="My Payments" icon={<HistoryIcon className="w-5 h-5" />} isMobile={true} />
+                <NavButton page="contact" label="Contact" icon={<MailIcon className="w-5 h-5" />} isMobile={true} />
                 {currentUser.role === 'admin' && (
                     <NavButton page="admin" label="Admin" icon={<AdminDashboardIcon className="w-5 h-5" />} isMobile={true} />
                 )}

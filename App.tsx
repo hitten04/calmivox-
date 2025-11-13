@@ -7,8 +7,9 @@ import UserPayments from './components/UserPayments';
 import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import ImageHistory from './components/ImageHistory';
+import ContactPage from './components/ContactPage';
 
-export type Page = 'generator' | 'history' | 'payment' | 'admin' | 'user-payments';
+export type Page = 'generator' | 'history' | 'payment' | 'admin' | 'user-payments' | 'contact';
 
 export interface User {
   id: number;
@@ -202,6 +203,8 @@ const App: React.FC = () => {
         return currentUser.role === 'admin' ? <AdminDashboard users={users} payments={paymentRequests} manageUserCredits={manageUserCredits} handlePaymentDecision={handlePaymentDecision} /> : <h2>Access Denied</h2>;
       case 'user-payments':
         return <UserPayments payments={paymentRequests.filter(p => p.userId === currentUser.id)} />;
+      case 'contact':
+        return <ContactPage />;
       default:
         return <ImageGenerator credits={currentUser.credits} deductCredits={deductCredits} addGenerationToHistory={addGenerationToHistory} />;
     }
